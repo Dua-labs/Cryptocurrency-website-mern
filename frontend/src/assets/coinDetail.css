@@ -1,0 +1,223 @@
+/* ─── Coin Detail Page ─────────────────────────────── */
+
+.cd-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Topbar left section */
+.cd-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cd-page {
+  min-height: 100vh;
+  background: var(--cx-bg);
+  font-family: var(--cx-font);
+  color: var(--cx-text);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cd-loading, .cd-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 60vh;
+  color: var(--cx-muted);
+  font-size: .9rem;
+}
+.cd-spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--cx-border2);
+  border-top-color: var(--cx-accent);
+  border-radius: 50%;
+  animation: pf-spin .7s linear infinite;
+}
+
+/* Header */
+.cd-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cd-back-btn {
+  background: transparent;
+  border: 1px solid var(--cx-border2);
+  color: var(--cx-muted);
+  font-family: var(--cx-font);
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .45rem .85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.cd-back-btn:hover { color: var(--cx-text); border-color: var(--cx-text); }
+
+.cd-coin-info {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  flex: 1;
+}
+.cd-coin-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cd-coin-name { font-size: 1.3rem; font-weight: 700; }
+.cd-coin-sym  {
+  font-size: .75rem;
+  color: var(--cx-sub);
+  font-family: var(--cx-mono);
+  margin-left: .4rem;
+}
+.cd-rank {
+  font-size: .72rem;
+  background: var(--cx-surface2);
+  border: 1px solid var(--cx-border2);
+  color: var(--cx-muted);
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  font-family: var(--cx-mono);
+  margin-left: .5rem;
+}
+
+.cd-header-right { margin-left: auto; }
+.cd-watch-btn {
+  background: transparent;
+  border: 1px solid var(--cx-border2);
+  color: var(--cx-muted);
+  font-family: var(--cx-font);
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .45rem .85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.cd-watch-btn:hover { border-color: var(--cx-accent); color: var(--cx-accent); }
+.cd-watch-msg { font-size: .82rem; color: var(--cx-up); font-weight: 600; }
+
+/* Price hero */
+.cd-price-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.cd-price {
+  font-family: var(--cx-mono);
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -.03em;
+}
+.cd-pct {
+  font-family: var(--cx-mono);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.cd-pct.up   { color: var(--cx-up); }
+.cd-pct.down { color: var(--cx-down); }
+
+/* Chart panel */
+.cd-chart-panel {
+  background: var(--cx-surface);
+  border: 1px solid var(--cx-border);
+  border-radius: var(--cx-radius);
+  padding: 1.25rem 1.5rem;
+}
+.cd-chart-controls {
+  display: flex;
+  gap: .4rem;
+  margin-bottom: 1.25rem;
+}
+.cd-days-btn {
+  background: transparent;
+  border: 1px solid var(--cx-border);
+  color: var(--cx-muted);
+  font-family: var(--cx-font);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .35rem .7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.cd-days-btn:hover { border-color: var(--cx-border2); color: var(--cx-text); }
+.cd-days-btn.active {
+  background: var(--cx-accent);
+  border-color: var(--cx-accent);
+  color: #fff;
+}
+.cd-chart-loading {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+/* Stats grid */
+.cd-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.cd-stat-card {
+  background: var(--cx-surface);
+  border: 1px solid var(--cx-border);
+  border-radius: var(--cx-radius);
+  padding: 1.1rem 1.25rem;
+}
+.cd-stat-label {
+  font-size: .68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--cx-muted);
+  margin-bottom: .4rem;
+}
+.cd-stat-value {
+  font-family: var(--cx-mono);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Description */
+.cd-desc-panel {
+  background: var(--cx-surface);
+  border: 1px solid var(--cx-border);
+  border-radius: var(--cx-radius);
+  padding: 1.5rem;
+}
+.cd-desc-title {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+.cd-desc-text {
+  font-size: .85rem;
+  color: var(--cx-muted);
+  line-height: 1.7;
+}
+.cd-desc-text a { color: var(--cx-accent); }
+
+@media (max-width: 900px) {
+  .cd-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cd-page { padding: 1rem; }
+  .cd-stats-grid { grid-template-columns: 1fr; }
+  .cd-price { font-size: 1.8rem; }
+}

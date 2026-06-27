@@ -1,0 +1,10 @@
+import api from './axiosConfig';
+
+export const fetchTransactions = (params = {}) =>
+  api.get('/transactions', { params }).then((r) => r.data);
+
+export const createTransaction = (payload) =>
+  api.post('/transactions', payload).then((r) => r.data.data);
+
+export const deleteTransaction = (id) =>
+  api.delete(`/transactions/${id}`).then((r) => r.data);

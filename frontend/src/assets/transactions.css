@@ -1,0 +1,93 @@
+/* ─── Transactions Page ────────────────────────────── */
+
+.tx-filter-select {
+  background: var(--cx-surface);
+  border: 1px solid var(--cx-border2);
+  color: var(--cx-text);
+  font-family: var(--cx-font);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .45rem .75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .15s;
+}
+.tx-filter-select:focus { border-color: var(--cx-accent); }
+
+.tx-table-wrap {
+  background: var(--cx-surface);
+  border: 1px solid var(--cx-border);
+  border-radius: var(--cx-radius);
+  overflow-x: auto;
+}
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .83rem;
+}
+.tx-table thead tr { border-bottom: 1px solid var(--cx-border); }
+.tx-table th {
+  padding: .75rem 1.25rem;
+  font-size: .67rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--cx-sub);
+  white-space: nowrap;
+}
+.tx-table td { padding: .9rem 1.25rem; white-space: nowrap; }
+.tx-right { text-align: right; }
+.tx-mono  { font-family: var(--cx-mono); }
+.tx-bold  { font-weight: 600; }
+.tx-muted { color: var(--cx-sub); }
+
+.tx-row {
+  border-bottom: 1px solid var(--cx-border);
+  transition: background .15s;
+}
+.tx-row:last-child { border-bottom: none; }
+.tx-row:hover { background: var(--cx-surface2); }
+
+.tx-badge {
+  display: inline-block;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.tx-buy      { background: rgba(34,211,160,.15);  color: var(--cx-up); }
+.tx-sell     { background: rgba(244,63,94,.12);   color: var(--cx-down); }
+.tx-transfer { background: rgba(59,127,255,.12);  color: var(--cx-accent); }
+
+.tx-asset { display: flex; flex-direction: column; gap: .1rem; }
+.tx-coin-name { font-weight: 600; font-size: .85rem; }
+.tx-coin-sym  { font-size: .7rem; color: var(--cx-sub); font-family: var(--cx-mono); }
+
+.tx-del-btn {
+  background: transparent;
+  border: none;
+  color: var(--cx-sub);
+  font-size: .85rem;
+  cursor: pointer;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  transition: color .15s, background .15s;
+}
+.tx-del-btn:hover { color: var(--cx-down); background: rgba(244,63,94,.08); }
+
+/* select inside modal */
+.pf-select {
+  background: var(--cx-bg);
+  border: 1px solid var(--cx-border);
+  border-radius: 8px;
+  padding: .65rem .85rem;
+  color: var(--cx-text);
+  font-family: var(--cx-font);
+  font-size: .85rem;
+  outline: none;
+  transition: border-color .15s;
+  width: 100%;
+}
+.pf-select:focus { border-color: var(--cx-accent); }
