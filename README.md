@@ -57,7 +57,7 @@ npm run dev
 *Github: @Dua-labs*
 
 
-## ⭐ If you found this project usefull, please consider giving it a star.
+### ⭐ If you found this project usefull, please consider giving it a star.
 
 ---
 
